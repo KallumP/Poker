@@ -1,11 +1,11 @@
 import { Box } from '@mui/material';
-import React from 'react';
 
+import React from 'react';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import FilterVintageIcon from '@mui/icons-material/FilterVintage';
 import HeartBrokenIcon from '@mui/icons-material/HeartBroken';
-import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 import DiamondIcon from '@mui/icons-material/Diamond';
+import EnergySavingsLeafIcon from '@mui/icons-material/EnergySavingsLeaf';
 
 const Card = ({ suit, value }) => {
 
@@ -15,7 +15,7 @@ const Card = ({ suit, value }) => {
 		} else if (suit == 1) {
 			return <HeartBrokenIcon />;
 		} else if (suit == 2) {
-			return <BeachAccessIcon />;
+			return <EnergySavingsLeafIcon />;
 		} else if (suit == 3) {
 			return <DiamondIcon />;
 		} else return <HelpOutlineIcon />;

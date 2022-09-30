@@ -1,5 +1,5 @@
 import Header from '../components/header';
-import { h1Style } from '../utils';
+import { h1Style, ShuffleDeck, GenerateCardDeck } from '../utils';
 import Card from '../components/card';
 
 import React from 'react';
@@ -25,6 +25,14 @@ const Room = () => {
 	}
 
 	function renderCards() {
+
+		let unshuffledDeck = GenerateCardDeck();
+		console.log("Unshuffled Cards: ", unshuffledDeck);
+		
+		let shuffledDeck = ShuffleDeck(unshuffledDeck);
+		console.log("Shuffled Cards: ", shuffledDeck);
+
+
 		return (
 			<Stack
 				spacing={5}
@@ -34,15 +42,9 @@ const Room = () => {
 					display: 'flex',
 					justifyContent: 'center',
 				}}>
-				<Card
-					value={'4'}
-					suit={1}
-				/>
+				{shuffledDeck[0]}
 
-				<Card
-					value={'K'}
-					suit={3}
-				/>
+				{shuffledDeck[1]}
 			</Stack>
 		);
 	}
